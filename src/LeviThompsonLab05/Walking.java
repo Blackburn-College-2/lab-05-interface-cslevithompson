@@ -14,7 +14,7 @@ public class Walking implements CanTravel {
 
     @Override
     public String toString() {
-        return "Walking";
+        return "Person Walking: ";
     }
     
 
@@ -22,12 +22,8 @@ public class Walking implements CanTravel {
     
     @Override
     public double move(double miles) {
-        int hour = 0;
-        double minute = 0;
-        miles = miles * 100;
-        hour = (int)((double)miles / this.speed);
-        minute = ((double)miles % this.speed) * 60;
+        double timeTaken = miles / this.speed;
         
-        return hour + minute;
+        return timeTaken;
     }
 }

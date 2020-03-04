@@ -17,23 +17,21 @@ public class runner {
     public static void main(String[] args) {
         // TODO code application logic here
         Walking w = new Walking();
-       roundTrip(w,10.0);
-       
-    
+        roundTrip(w, 10.0);
+
     }
-    
-    public static void roundTrip(CanTravel movement, double distance){
+
+    public static void roundTrip(CanTravel movement, double distance) {
         System.out.println("Round Trip!");
         System.out.println("Leaving...");
-        if(distance <= 1) {
-            System.out.print("Person " + movement.toString() + ": " 
-                    + distance + " mile");
-        } else {
-            System.out.println("Person " + movement.toString() + ": " 
-                    + distance + " miles");
-        }
         
-        movement.move(distance);
-    
-    }      
+        if(distance <= 1) {
+            System.out.println(movement.toString() + distance + " mile");
+        } else {
+            System.out.println(movement.toString() + distance + " miles");
+        }
+
+    }
+
+   
 }
